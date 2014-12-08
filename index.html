@@ -1,10 +1,11 @@
 <html>
   <body>
-    <script type="text/javascript" src="main.js"></script>
-        <textarea name="box-content" id="box-content" rows="5" cols="70">
-        	The David Walsh Blog is the best blog around!  MooTools FTW!
-        </textarea>
-    <br /><br />
-    <p><input type="button" id="copy" name="copy" value="Copy to Clipboard" /></p>
+  	<button id="d_clip_button" data-clipboard-text="Copy me!" title="Click to copy to clipboard.">Copy to Clipboard</button>
+
+    <script type="text/javascript" src="ZeroClipboard.js"></script>
+    <script type="text/javascript">
+      var client = new ZeroClipboard( document.getElementById('d_clip_button') );
+      client.setText( "Copy me!" );
+    </script>
   </body>
 </html>
